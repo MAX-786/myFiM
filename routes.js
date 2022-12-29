@@ -35,15 +35,15 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/user-profile",
-    name: "User Profile",
+    path: "/analysis",
+    name: "Analysis",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
 
     layout: "/admin",
   },
   {
-    path: "/table-list",
+    path: "/consents",
     name: "Consents",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
