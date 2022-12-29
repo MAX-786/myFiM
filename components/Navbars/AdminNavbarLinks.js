@@ -21,8 +21,11 @@ import Button from "components/CustomButtons/Button.js";
 import useWindowSize from "components/Hooks/useWindowSize.js";
 
 import styles from "assets/jss/nextjs-material-dashboard/components/headerLinksStyle.js";
+import { getAuth } from "firebase/auth";
+import Router from "next/router";
 
 export default function AdminNavbarLinks() {
+  const auth = getAuth();
   const size = useWindowSize();
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -208,7 +211,10 @@ export default function AdminNavbarLinks() {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                      onClick={() => {
+                        auth.signOut();
+                        Router.push("/");
+                      }}
                       className={classes.dropdownItem}
                     >
                       Logout

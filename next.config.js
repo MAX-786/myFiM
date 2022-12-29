@@ -4,7 +4,7 @@ const withSass = require("@zeit/next-sass");
 const withCSS = require("@zeit/next-css");
 const webpack = require("webpack");
 const path = require("path");
-const {parsed: myenv} = require("dotenv");
+const {parsed: myEnv} = require("dotenv");
 
 module.exports = withPlugins([[withSass], [withImages], [withCSS]], {
   webpack(config, options) {
