@@ -13,6 +13,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import Table from "components/Table/Table.js";
 
 const styles = {
   cardCategoryWhite: {
@@ -45,7 +46,7 @@ function TransactionHistory() {
               <h4 className={classes.cardTitleWhite}>History</h4>
             </CardHeader>
             <CardBody>
-              <GridContainer>
+              {/* <GridContainer>
                 <GridItem xs={12} sm={12} md={3}>
                   <CustomInput
                     labelText="Paid To"
@@ -100,7 +101,19 @@ function TransactionHistory() {
                     }}
                   />
                 </GridItem>
-              </GridContainer>
+              </GridContainer> */}
+              <Table
+              tableHeaderColor="primary"
+              tableHead={["Name", "Country", "City", "Salary"]}
+              tableData={[
+                ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
+                ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
+                ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
+                ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
+                ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
+                ["Mason Porter", "Chile", "Gloucester", "$78,615"],
+              ]}
+            />
             </CardBody>
           </Card>
         </GridItem>
