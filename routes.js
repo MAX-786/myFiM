@@ -1,29 +1,14 @@
-/*!
-
-=========================================================
-* * NextJS Material Dashboard v1.1.0 based on Material Dashboard React v1.9.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/nextjs-material-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/nextjs-material-dashboard/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// @material-ui/icons
+// Side bar options
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
-import Language from "@material-ui/icons/Language";
+import LogoutIcon from '@mui/icons-material/Logout';
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import PolicyIcon from '@mui/icons-material/Policy';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import SavingsIcon from '@mui/icons-material/Savings';
 
 const dashboardRoutes = [
   {
@@ -35,8 +20,8 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/analysis",
-    name: "Analysis",
+    path: "/profile",
+    name: "Profile",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
 
@@ -50,54 +35,70 @@ const dashboardRoutes = [
 
     layout: "/admin",
   },
-  // {
-  //   path: "/typography",
-  //   name: "Typography",
-  //   rtlName: "طباعة",
-  //   icon: LibraryBooks,
+  {
+    path: "/transfers",
+    name: "Transfers",
+    rtlName: "طباعة",
+    icon: LibraryBooks,
 
-  //   layout: "/admin",
-  // },
-  // {
-  //   path: "/icons",
-  //   name: "Icons",
-  //   rtlName: "الرموز",
-  //   icon: BubbleChart,
+    layout: "/admin",
+  },
+  {
+    path: "/savings",
+    name: "Savings",
+    rtlName: "الرموز",
+    icon: SavingsIcon,
 
-  //   layout: "/admin",
-  // },
-  // {
-  //   path: "/maps",
-  //   name: "Maps",
-  //   rtlName: "خرائط",
-  //   icon: LocationOn,
+    layout: "/admin",
+  },
+  {
+    path: "/transactionHistory",
+    name: "Transaction History",
+    rtlName: "خرائط",
+    icon: AccountBalanceIcon,
 
-  //   layout: "/admin",
-  // },
-  // {
-  //   path: "/notifications",
-  //   name: "Notifications",
-  //   rtlName: "إخطارات",
-  //   icon: Notifications,
+    layout: "/admin",
+  },
+  {
+    path: "/notifications",
+    name: "Notifications",
+    rtlName: "إخطارات",
+    icon: Notifications,
 
-  //   layout: "/admin",
-  // },
-  // {
-  //   path: "/rtl-page",
-  //   name: "RTL Support",
-  //   rtlName: "پشتیبانی از راست به چپ",
-  //   icon: Language,
+    layout: "/admin",
+  },
+  {
+    path: "/cards",
+    name: "Cards",
+    rtlName: "پشتیبانی از راست به چپ",
+    icon: CreditCardIcon,
 
-  //   layout: "/rtl",
-  // },
-  // {
-  //   path: "/upgrade-to-pro",
-  //   name: "Upgrade To PRO",
-  //   rtlName: "التطور للاحترافية",
-  //   icon: Unarchive,
+    layout: "/admin",
+  },
+  {
+    path: "/insurance",
+    name: "Insurance",
+    rtlName: "التطور للاحترافية",
+    icon: PolicyIcon ,
 
-  //   layout: "/admin",
-  // },
+    layout: "/admin",
+  },
+  {
+    path: "/loan",
+    name: "Loan",
+    rtlName: "التطور للاحترافية",
+    icon: CreditScoreIcon,
+
+    layout: "/admin",
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    rtlName: "التطور للاحترافية",
+    icon: LogoutIcon,
+
+    layout: "/admin",
+  },
 ];
 
 export default dashboardRoutes;

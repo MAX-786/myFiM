@@ -1,5 +1,4 @@
 import React from "react";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 // layout for this page
@@ -14,8 +13,6 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
-import avatar from "assets/img/faces/marc.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -36,7 +33,7 @@ const styles = {
   },
 };
 
-function UserProfile() {
+function Insurance() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
@@ -154,11 +151,6 @@ function UserProfile() {
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
           <Card profile>
-            <CardAvatar profile>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
             <CardBody profile>
               <h6 className={classes.cardCategory}>White/foggy kuch kuch</h6>
               <h4 className={classes.cardTitle}>Anonymous</h4>
@@ -180,6 +172,6 @@ function UserProfile() {
   );
 }
 
-UserProfile.layout = Admin;
+Insurance.layout = Admin;
 
-export default UserProfile;
+export default Insurance;

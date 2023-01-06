@@ -23,6 +23,7 @@
     "chartist": "0.10.1",
     "classnames": "2.2.6",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "firebase": "^9.15.0",
     "history": "5.0.0",
     "next": "10.0.5",

@@ -50,7 +50,7 @@ export default function Index() {
       <Loading />
       </div>
       <div style={centerStyle} >
-      <Button size="large" variant="contained" color="success" onClick={signIn} startIcon={<GoogleIcon />}>Please SignIn With Google</Button>
+      <Button size="large" variant="contained" color="success" onClick={signIn} startIcon={<GoogleIcon />}>Please Sign In With Google</Button>
         </div>
 
     </>

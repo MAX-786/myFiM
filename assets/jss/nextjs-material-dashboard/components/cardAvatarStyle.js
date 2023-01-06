@@ -23,7 +23,7 @@ const cardAvatarStyle = {
       hexToRgb(blackColor) +
       ", 0.2)",
     "&$cardAvatarPlain": {
-      marginTop: "0",
+      marginTop: "50px",
     },
   },
   cardAvatarPlain: {},

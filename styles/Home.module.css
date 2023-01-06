@@ -1,0 +1,10 @@
+.home {
+    text-align: center;
+    font-size: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        font-size: 5rem;
+    }
+  }
