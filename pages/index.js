@@ -1,13 +1,15 @@
 import React from "react";
-import Router, {useRouter} from "next/router";
+import Router, { useRouter } from "next/router";
 import { initFirebase } from "../firebase/firebaseApp";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Button } from "@material-ui/core";
-import GoogleIcon from '@mui/icons-material/Google';
+import GoogleIcon from "@mui/icons-material/Google";
 import zIndex from "@material-ui/core/styles/zIndex";
 import Loading from "../components/Loading/Loading";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
+import { Provider } from "react-redux";
+import { store } from "store.js";
 
 export default function Index() {
   // React.useEffect(() => {
@@ -34,25 +36,33 @@ export default function Index() {
     console.log(result.user);
   };
   const centerStyle = {
-      display: "flex",
-      justifyContent: "center",
-      padding: "20%"
-    }  
+    display: "flex",
+    justifyContent: "center",
+    padding: "20%",
+  };
   const myStyle = {
     background: "antiquewhite",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  };
   return (
     <>
-    <div style = {myStyle}>
-      <Loading />
-      </div>
-      <div style={centerStyle} >
-      <Button size="large" variant="contained" color="success" onClick={signIn} startIcon={<GoogleIcon />}>Please SignIn With Google</Button>
+      <Provider store={store}>
+        <div style={myStyle}>
+          <Loading />
         </div>
-
+        <div style={centerStyle}>
+          <Button
+            size="large"
+            variant="contained"
+            color="success"
+            onClick={signIn}
+            startIcon={<GoogleIcon />}>
+            Please SignIn With Google
+          </Button>
+        </div>
+      </Provider>
     </>
   );
 }

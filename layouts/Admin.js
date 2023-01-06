@@ -17,7 +17,8 @@ import styles from "assets/jss/nextjs-material-dashboard/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/reactlogo.png";
-
+import { Provider } from "react-redux";
+import {store} from "store.js";
 let ps;
 
 export default function Admin({ children, ...rest }) {
@@ -76,6 +77,7 @@ export default function Admin({ children, ...rest }) {
     };
   }, [mainPanel]);
   return (
+    <Provider store={store}>
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
@@ -112,5 +114,6 @@ export default function Admin({ children, ...rest }) {
         /> */}
       </div>
     </div>
+    </Provider>
   );
 }
