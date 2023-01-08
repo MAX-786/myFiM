@@ -1,0 +1,129 @@
+{
+  "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.Resources/deployments/Microsoft.CognitiveServicesComputerVision-20221212191755",
+  "name": "Microsoft.CognitiveServicesComputerVision-20221212191755",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "marketplaceItemId": "Microsoft.CognitiveServicesComputerVision"
+  },
+  "properties": {
+    "templateHash": "143053568087925578",
+    "parameters": {
+      "name": {
+        "type": "String",
+        "value": "Ritika0523"
+      },
+      "location": {
+        "type": "String",
+        "value": "centralindia"
+      },
+      "resourceGroupName": {
+        "type": "String",
+        "value": "speech"
+      },
+      "resourceGroupId": {
+        "type": "String",
+        "value": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech"
+      },
+      "sku": {
+        "type": "String",
+        "value": "F0"
+      },
+      "tagValues": {
+        "type": "Object",
+        "value": {}
+      },
+      "virtualNetworkType": {
+        "type": "String",
+        "value": "None"
+      },
+      "vnet": {
+        "type": "Object",
+        "value": {}
+      },
+      "ipRules": {
+        "type": "Array",
+        "value": []
+      },
+      "identity": {
+        "type": "Object",
+        "value": {
+          "type": "None"
+        }
+      },
+      "privateEndpoints": {
+        "type": "Array",
+        "value": []
+      },
+      "privateDnsZone": {
+        "type": "String",
+        "value": "privatelink.cognitiveservices.azure.com"
+      },
+      "isCommitmentPlanForDisconnectedContainerEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "commitmentPlanForDisconnectedContainer": {
+        "type": "Object",
+        "value": {
+          "current": {},
+          "hostingModel": "DisconnectedContainer",
+          "planType": "Read",
+          "autoRenew": true
+        }
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Succeeded",
+    "timestamp": "2022-12-12T13:53:29.098443Z",
+    "duration": "PT6.8456489S",
+    "correlationId": "c82456f3-0e91-4d71-8600-2c6f2ff3a237",
+    "providers": [
+      {
+        "namespace": "Microsoft.CognitiveServices",
+        "resourceTypes": [
+          {
+            "resourceType": "accounts",
+            "locations": [
+              "centralindia"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.Resources/deployments/deployVnet",
+            "resourceType": "Microsoft.Resources/deployments",
+            "resourceName": "deployVnet"
+          }
+        ],
+        "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.CognitiveServices/accounts/Ritika0523",
+        "resourceType": "Microsoft.CognitiveServices/accounts",
+        "resourceName": "Ritika0523"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.CognitiveServices/accounts/Ritika0523",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceName": "Ritika0523"
+          }
+        ],
+        "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.CognitiveServices/accounts/Ritika0523/commitmentPlans/DisconnectedContainer-ComputerVision-1",
+        "resourceType": "Microsoft.CognitiveServices/accounts/commitmentPlans",
+        "resourceName": "Ritika0523/DisconnectedContainer-ComputerVision-1"
+      }
+    ],
+    "outputResources": [
+      {
+        "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.CognitiveServices/accounts/Ritika0523"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}
