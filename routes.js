@@ -68,34 +68,10 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/cards",
-    name: "Cards",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: CreditCardIcon,
-
-    layout: "/admin",
-  },
-  {
     path: "/insurance",
     name: "Insurance",
     rtlName: "التطور للاحترافية",
     icon: PolicyIcon ,
-
-    layout: "/admin",
-  },
-  {
-    path: "/loan",
-    name: "Loan",
-    rtlName: "التطور للاحترافية",
-    icon: CreditScoreIcon,
-
-    layout: "/admin",
-  },
-  {
-    path: "/logout",
-    name: "Logout",
-    rtlName: "التطور للاحترافية",
-    icon: LogoutIcon,
 
     layout: "/admin",
   },

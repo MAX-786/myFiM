@@ -46,11 +46,6 @@ function Profile() {
               <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
-            <CardAvatar profile>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
             <CardBody>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={3}>
@@ -62,7 +57,7 @@ function Profile() {
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                <GridItem xs={12} sm={12} md={3}>
                   <CustomInput
                     labelText="Email address"
                     id="email-address"
@@ -71,9 +66,10 @@ function Profile() {
                     }}
                   />
                 </GridItem>
+                
               </GridContainer>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={3}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="First Name"
                     id="first-name"
@@ -82,7 +78,7 @@ function Profile() {
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={3}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="Last Name"
                     id="last-name"
@@ -91,6 +87,11 @@ function Profile() {
                     }}
                   />
                 </GridItem>
+                <GridItem><CardAvatar profile>
+              <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <img src={avatar} alt="..." />
+              </a>
+            </CardAvatar></GridItem>
               </GridContainer>
             </CardBody>
             <CardFooter>
