@@ -30,6 +30,8 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import { useState } from 'react';
+import { ButtonGroup ,Button} from "@material-ui/core";
 
 import { bugs, website, server } from "variables/general.js";
 
@@ -43,11 +45,12 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 
 function Dashboard() {
   const useStyles = makeStyles(styles);
+  const [isVisibleMonth, setIsVisibleMonth] = useState(true);
   const classes = useStyles();
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
+        <GridItem xs={12} sm={6} md={4}>
           <Card>
             <CardHeader color="warning" stats icon>
               <CardIcon color="warning">
@@ -70,24 +73,7 @@ function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="dark" stats icon>
-              <CardIcon color="dark">
-                <Store />
-              </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <DateRange />
-                Last 24 Hours
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
+        <GridItem xs={12} sm={6} md={4}>
           <Card>
             <CardHeader color="danger" stats icon>
               <CardIcon color="danger">
@@ -104,7 +90,7 @@ function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
+        <GridItem xs={12} sm={6} md={4}>
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
@@ -123,34 +109,9 @@ function Dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="success">
-              <ChartistGraph
-                className="ct-chart"
-                data={dailySalesChart.data}
-                type="Line"
-                options={dailySalesChart.options}
-                listener={dailySalesChart.animation}
-              />
-            </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
-              <p className={classes.cardCategory}>
-                <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
-                </span>{" "}
-                increase in today sales.
-              </p>
-            </CardBody>
-            <CardFooter chart>
-              <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        
+      {isVisibleMonth?(
+          <GridItem xs={12} sm={12} md={6}>
           <Card chart>
             <CardHeader color="warning">
               <ChartistGraph
@@ -163,40 +124,73 @@ function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Monthly Expenditure Report</h4>
+              {/* <p className={classes.cardCategory}>Last Campaign Performance</p> */}
             </CardBody>
-            <CardFooter chart>
+            {/* <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> campaign sent 2 days ago
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
-          <Card chart>
-            <CardHeader color="dark">
-              <ChartistGraph
-                className="ct-chart"
-                data={completedTasksChart.data}
-                type="Line"
-                options={completedTasksChart.options}
-                listener={completedTasksChart.animation}
-              />
+          </GridItem>
+        ):(
+          <GridItem xs={12} sm={12} md={6}>
+        <Card chart>
+          <CardHeader color="success">
+            <ChartistGraph
+              className="ct-chart"
+              data={dailySalesChart.data}
+              type="Line"
+              options={dailySalesChart.options}
+              listener={dailySalesChart.animation}
+            />
+          </CardHeader>
+          <CardBody>
+            <h4 className={classes.cardTitle}>Weekly Expenditure Report</h4>
+            {/* <p className={classes.cardCategory}>
+              <span className={classes.successText}>
+                <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+              </span>{" "}
+              increase in today sales.
+            </p> */}
+          </CardBody>
+          {/* <CardFooter chart>
+            <div className={classes.stats}>
+              <AccessTime /> updated 4 minutes ago
+            </div>
+          </CardFooter> */}
+        </Card>
+      </GridItem>)}
+      <GridItem xs={12} sm={6} md={6}>
+          <Card>
+            <CardHeader color="dark" stats icon>
+              <CardIcon color="dark">
+                <Store />
+              </CardIcon>
+              <p className={classes.cardCategory}>Revenue</p>
+              <h3 className={classes.cardTitle}>$34,245</h3>
             </CardHeader>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
-            </CardBody>
-            <CardFooter chart>
+            <CardFooter stats>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <DateRange />
+                Last 24 Hours
               </div>
             </CardFooter>
           </Card>
         </GridItem>
+
       </GridContainer>
       <GridContainer>
+        <GridItem>
+        <ButtonGroup variant="outlined" aria-label="outlined button group">
+          <Button onClick={() =>setIsVisibleMonth(true)}>Month</Button>
+          <Button onClick={() => setIsVisibleMonth(false)}>Week</Button>
+        </ButtonGroup>
+        </GridItem>
+      </GridContainer>
+      
+      {/* <GridContainer>
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title="Tasks:"
@@ -260,7 +254,7 @@ function Dashboard() {
             </CardBody>
           </Card>
         </GridItem>
-      </GridContainer>
+      </GridContainer> */}
     </div>
   );
 }
