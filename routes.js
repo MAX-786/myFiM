@@ -8,7 +8,6 @@ import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import PolicyIcon from '@mui/icons-material/Policy';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import SavingsIcon from '@mui/icons-material/Savings';
 
 const dashboardRoutes = [
   {
@@ -40,14 +39,6 @@ const dashboardRoutes = [
     name: "Transfers",
     rtlName: "طباعة",
     icon: LibraryBooks,
-
-    layout: "/admin",
-  },
-  {
-    path: "/savings",
-    name: "Savings",
-    rtlName: "الرموز",
-    icon: SavingsIcon,
 
     layout: "/admin",
   },

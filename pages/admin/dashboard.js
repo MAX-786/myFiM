@@ -16,6 +16,7 @@ import Accessibility from "@material-ui/icons/Accessibility";
 import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
+import SavingsIcon from '@mui/icons-material/Savings';
 // layout for this page
 import Admin from "layouts/Admin.js";
 // core components
