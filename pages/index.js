@@ -42,7 +42,10 @@ export default function Index() {
     borderBottom:"1px solid #475264",
     paddingLeft:".75rem",
     paddingBottom:".75rem",
-    paddingTop:".75rem"
+    paddingTop:".75rem",
+    marginLeft:"1.5rem",
+    marginRight:"1.5rem",
+    fontSize:".75rem"
   }
   const bodyContent = {
     padding: "10%"
@@ -84,11 +87,12 @@ export default function Index() {
     textAlign:"center",
     padding: "10%",
     background:"radial-gradient(54.35% 54.35% at 13.82% 7%, #162051 0%, #161B32 100%)",
-    color:"#fff"
-
+    color:"#475264",
+    fontSize:"1.5rem"
   }
   const h3Style = {
-
+    fontSize:"1rem",
+    padding: "3%"
   }
   return (
     <>
@@ -114,8 +118,9 @@ export default function Index() {
         can keep track of <br/>the finances and consents, also make transactions.</p>
     </div>
     <div style={footerStyle}>
-      <h3 style={h3Style}>&copy; {1900 + new Date().getYear()}{" "}Copyright myFim</h3>
+      <p>SEE THE SOURCE CODE</p>
       <Button size="large" variant="outlined" color="primary" href="https://github.com/MAX-786/myFiM" startIcon={<GitHubIcon/>}>View on Github</Button>
+      <h3 style={h3Style}>&copy; {1900 + new Date().getYear()}{" "}Copyright myFim</h3>
     </div>
     </>
   );

@@ -561,3 +561,12 @@ footer ul li a:hover {
   display: inline-block;
   line-height: 1em;
 }
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-image: linear-gradient(to right, #f58a34, #7c2ae8);
+  color: #b8c5e5;
+
+}
