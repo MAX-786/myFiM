@@ -69,23 +69,23 @@ export function getData() {
   let res = {};
   var config = {
     method: "get",
-    url: "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch",
+    url: "https://hackathon.pirimidtech.com/hackathon/consent/data/fetch?trackingId=f35761ac-4a18-11e8-96ff-0277a9fbfed&referenceId=ff79484f-559b-475c-aa77-8a049ad0ba1a",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
       API_KEY: "1e3361e7b31e04df81befdcfe3",
     },
     data: null, // Dunno WHY? but it was needed. Stackoverflow helped.
-    params: {
-      trackingId: "f35761ac-4a18-11e8-96ff-0277a9fbfed",
-      referenceId: "ff79484f-559b-475c-aa77-8a049ad0ba1a"
-    }
+    // params: {
+    //   trackingId: "f35761ac-4a18-11e8-96ff-0277a9fbfed",
+    //   referenceId: "ff79484f-559b-475c-aa77-8a049ad0ba1a"
+    // }
   };
 
   axios(config)
     .then(function (response) {
       res = response.data;
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
