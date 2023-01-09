@@ -1,0 +1,31 @@
+[
+  {
+    "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.Resources/deployments/Microsoft.CognitiveServicesComputerVision-20221212191755/operations/0E2D94868259DDC6",
+    "operationId": "0E2D94868259DDC6",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-12-12T13:53:28.9972291Z",
+      "duration": "PT5.7099391S",
+      "trackingId": "14ecd8ff-c28e-4256-a576-c31bd58f1de4",
+      "statusCode": "Created",
+      "targetResource": {
+        "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.CognitiveServices/accounts/Ritika0523",
+        "resourceType": "Microsoft.CognitiveServices/accounts",
+        "resourceName": "Ritika0523"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/70377f12-c720-4e07-b7e3-0859992e3b63/resourceGroups/speech/providers/Microsoft.Resources/deployments/Microsoft.CognitiveServicesComputerVision-20221212191755/operations/08585307536836412813",
+    "operationId": "08585307536836412813",
+    "properties": {
+      "provisioningOperation": "EvaluateDeploymentOutput",
+      "provisioningState": "Succeeded",
+      "timestamp": "2022-12-12T13:53:29.0750513Z",
+      "duration": "PT5.7877613S",
+      "trackingId": "345f0157-937b-4535-ad8b-e2cba564b267",
+      "statusCode": "OK"
+    }
+  }
+]
