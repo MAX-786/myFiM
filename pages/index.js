@@ -27,7 +27,8 @@ export default function Index() {
 
   if (user) {
     console.log(user);
-    router.push("/dashboard");
+    
+    router.push("/admin/dashboard");
     return <div>Loading...</div>;
   }
 

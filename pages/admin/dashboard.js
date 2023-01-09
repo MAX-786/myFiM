@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -45,11 +45,19 @@ import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js
 import { initiateConsents, checkStatus } from "Data/index.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setUserId, incrementByAmount } from "Data/userSlice.js";
+import router from "next/router";
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   const userIds = useSelector((state) => state.user.userId);
   const dispatch = useDispatch();
+
+  // useEffect(() => {
+
+  //   userIds ? router.push(window.location.pathname): router.push('/');
+
+  //   console.log(window.location.pathname);
+  // },[]);
 
   return (
     <div>
