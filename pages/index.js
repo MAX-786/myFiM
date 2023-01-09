@@ -1,14 +1,19 @@
 import React from "react";
-import Router, {useRouter} from "next/router";
+import Router, { useRouter } from "next/router";
 import { initFirebase } from "../firebase/firebaseApp";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Button } from "@material-ui/core";
-import GoogleIcon from '@mui/icons-material/Google';
+import GoogleIcon from "@mui/icons-material/Google";
 import zIndex from "@material-ui/core/styles/zIndex";
 import Loading from "../components/Loading/Loading";
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
+
 import GitHubIcon from '@mui/icons-material/GitHub';
+
+import { Provider } from "react-redux";
+import { store } from "store.js";
+
 
 export default function Index() {
   // React.useEffect(() => {
@@ -26,7 +31,8 @@ export default function Index() {
 
   if (user) {
     console.log(user);
-    router.push("/dashboard");
+    
+    router.push("/admin/dashboard");
     return <div>Loading...</div>;
   }
 
@@ -34,10 +40,18 @@ export default function Index() {
     const result = await signInWithPopup(auth, provider);
     console.log(result.user);
   };
+
   const bodyStyle = {
     background:"radial-gradient(54.35% 54.35% at 13.82% 7%, #162051 0%, #161B32 100%)",
     color:"#fff"
   }
+
+  const centerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    padding: "20%",
+  };
+
   const myStyle = {
     borderBottom:"1px solid #475264",
     paddingLeft:".75rem",
@@ -122,6 +136,8 @@ export default function Index() {
       <Button size="large" variant="outlined" color="primary" href="https://github.com/MAX-786/myFiM" startIcon={<GitHubIcon/>}>View on Github</Button>
       <h3 style={h3Style}>&copy; {1900 + new Date().getYear()}{" "}Copyright myFim</h3>
     </div>
+
+   
     </>
   );
 }
