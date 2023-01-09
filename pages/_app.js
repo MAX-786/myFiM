@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
@@ -26,6 +26,9 @@ import { initFirebase } from "../firebase/firebaseApp";
 
 initFirebase();
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
+
+
+
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -76,7 +79,15 @@ const MyApp = ({ Component, pageProps }) => {
   // }
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
-  
+
+    // const userIds = useSelector((state) => state.user.userId);
+
+    // useEffect(() => {
+
+    //   userIds ? router.push(window.location.pathname): router.push('/');
+
+    //   console.log(window.location.pathname);
+    // },[]);
     return (
       <React.Fragment>
         <Head>
@@ -85,7 +96,7 @@ const MyApp = ({ Component, pageProps }) => {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <title>myFiM | My Financial Manager</title>
-          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+          {/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> */}
         </Head>
         <Layout>
           <Component {...pageProps} />
