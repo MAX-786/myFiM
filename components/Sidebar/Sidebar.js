@@ -155,9 +155,6 @@ export default function Sidebar(props) {
             <CardBody profile>
               <h6 className={classes.cardCategory}>White/foggy kuch kuch</h6>
               <h4 className={classes.cardTitle}>Walter White</h4>
-              <Button color="primary" round>
-                Follow
-              </Button>
             </CardBody>
           </Card>
             {links}

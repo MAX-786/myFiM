@@ -134,7 +134,7 @@ function UserProfile() {
                 <GridItem xs={12} sm={12} md={12}>
                   <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
                   <CustomInput
-                    labelText="Update your profile."
+                    labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
                     id="about-me"
                     formControlProps={{
                       fullWidth: true,
@@ -161,13 +161,11 @@ function UserProfile() {
             </CardAvatar>
             <CardBody profile>
               <h6 className={classes.cardCategory}>White/foggy kuch kuch</h6>
-              <h4 className={classes.cardTitle}>Anonymous</h4>
+              <h4 className={classes.cardTitle}>Walter White</h4>
               <p className={classes.description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac ante sed elit
-               feugiat ullamcorper. Nulla lectus libero, malesuada sed ipsum malesuada, sagittis 
-               pulvinar elit. Vivamus dapibus massa et sem euismod commodo. Sed fermentum blandit 
-               lorem, eget aliquet ligula gravida lobortis. Fusce vel mauris metus.
-                Vestibulum condimentum odio vitae condimentum molestie.
+                I'm from a television series(Dekhi ho toh guess karo) which was about some medicine I was distributing to 
+                the people in need with my "assistance" jessy and some people didn't liked it including my own fu*ki... sorry my
+                own Brother-in-Law. In the end, everyone accepted me except ... you guessed it ... my own Brother-in-Law, so I have to take care of him.
               </p>
               <Button color="primary" round>
                 Follow

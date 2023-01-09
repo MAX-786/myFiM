@@ -1,11 +1,11 @@
 import React from "react";
 
-const Concents = () => {
+const Consents = () => {
   return (
     <div className="center">
-      <h2>Concents</h2>
+      <h2>Consents</h2>
     </div>
   );
 };
 
-export default Concents;
+export default Consents;
