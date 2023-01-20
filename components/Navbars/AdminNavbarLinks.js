@@ -138,7 +138,7 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      You{"'"}re now friend with Andrew
+                      You{"'"}re now friend wi th Andrew
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseNotification}
